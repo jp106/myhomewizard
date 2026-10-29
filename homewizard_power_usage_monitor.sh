@@ -10,7 +10,7 @@ Y="\e[33m" # Yellow
 N="\e[0m" # Reset to default color
 
 # -s hide progress meter, -S show error messages
-RECENT_MEASUREMENT_JSON=$(curl -sS https://192.168.1.240/api/measurement --insecure   -H "Authorization: Bearer $DEVICE_TOKEN"   -H "X-Api-Version: 2")
+RECENT_MEASUREMENT_JSON=$(curl -sS $DEVICE_IP/api/measurement --insecure   -H "Authorization: Bearer $DEVICE_TOKEN"   -H "X-Api-Version: 2")
 
 
 if [ $? -eq 0 ]; then
