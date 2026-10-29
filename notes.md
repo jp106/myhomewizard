@@ -6,7 +6,7 @@
 
 # STEP 2
 
-- Extract readings from json
+- Parse readings from json
 - Write readings to a log file - Solar surplus, Power consumption, Solar power generation
 
 # STEP 3 
