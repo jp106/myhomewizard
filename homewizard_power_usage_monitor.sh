@@ -12,10 +12,16 @@ N="\e[0m" # Reset to default color
 # -s hide progress meter, -S show error messages
 RECENT_MEASUREMENT_JSON=$(curl -sS $DEVICE_IP/api/measurement --insecure   -H "Authorization: Bearer $DEVICE_TOKEN"   -H "X-Api-Version: 2")
 
+write_to_log() {
+    local message="$1"
+    local log_file="$2"
+    echo -e "$message" >> "$log_file"
+}
 
 if [ $? -eq 0 ]; then
     echo "Meter reading at $(date)"
-    echo -e "$G $RECENT_MEASUREMENT_JSON" 
+    echo -e "$G $RECENT_MEASUREMENT_JSON"
+    
 fi
 
 
