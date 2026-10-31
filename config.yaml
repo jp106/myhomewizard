@@ -1,0 +1,5 @@
+- values: myhomewizard
+  token: kljfskdjfoiwerjwekjrlewroi
+  device_ip: https://0.0.0.0
+  email: myemail@gmail.com
+  log_file_path: log/power_usage.log
